@@ -1,4 +1,5 @@
 class Trip < ApplicationRecord
     has_many :stations
-    has_one :fare
+    has_many :fares
+    belongs_to :user
 end

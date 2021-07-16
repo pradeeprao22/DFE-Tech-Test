@@ -1,33 +1,22 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 I am using MAC so the instructions will be according to the MAC
 
-Running this project
+Running this project:
+Install the rails and ruby using rvm or rbenv(versions can be found in Gems file)
+
+
+Tapin and Tapout of the card works from API requests(API tested)
+links:
 
 
 
 
-First i created new project usi
+This system have four db tables:
+Users
+Trips
+Stations
+Zones
+Fares
+
+First i created new project using rails new command
+Then added the migration according to the needs
