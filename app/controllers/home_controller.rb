@@ -3,7 +3,7 @@ class HomeController < ActionController::Base
 
     def index
      @user = current_user
-     @trip = current_user.trips
+     @trips = current_user.trips
      @payments = current_user.payments.last
     end
 
