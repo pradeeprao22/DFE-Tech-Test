@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_16_183612) do
+ActiveRecord::Schema.define(version: 2021_07_17_161843) do
 
   create_table "fares", force: :cascade do |t|
     t.float "fare"
-    t.integer "zone_id"
+    t.integer "from_zone_id"
+    t.integer "to_zone_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["zone_id"], name: "index_fares_on_zone_id"
   end
 
   create_table "payments", force: :cascade do |t|
@@ -42,10 +42,11 @@ ActiveRecord::Schema.define(version: 2021_07_16_183612) do
     t.datetime "tapin"
     t.datetime "tapout"
     t.float "fare"
+    t.text "zones"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "user_id"
-    t.index "\"user\"", name: "index_trips_on_user"
+    t.index ["user_id"], name: "index_trips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,7 +67,7 @@ ActiveRecord::Schema.define(version: 2021_07_16_183612) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "fares", "zones"
   add_foreign_key "payments", "users"
   add_foreign_key "stations", "zones"
+  add_foreign_key "trips", "users"
 end
