@@ -33,4 +33,13 @@
 <% end %>
 </tbody>
 </table>
+<br>
+<br>
+<br>
+<br>
+
+<%= form_for [@payments] do |f| %>
+  <%= f.text_field :amount, autofocus: true, autocomplete: "amount" %>
+  <%= f.submit "Load Amount" %>
+<% end %> 
 

@@ -1,0 +1,5 @@
+<%= form_for [@payment] do |f| %>
+    <%= f.text_area :payment %>
+    <%= f.text_field :amount, autofocus: true, autocomplete: "amount" %>
+    <%= f.submit "Load Amount" %>
+<% end %>

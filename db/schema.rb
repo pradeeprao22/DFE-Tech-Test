@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_17_161843) do
+ActiveRecord::Schema.define(version: 2021_07_18_130657) do
 
   create_table "fares", force: :cascade do |t|
     t.float "fare"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2021_07_17_161843) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "trip_type"
     t.index ["user_id"], name: "index_trips_on_user_id"
   end
 
